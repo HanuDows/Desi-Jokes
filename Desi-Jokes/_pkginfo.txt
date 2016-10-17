@@ -1,1 +1,1 @@
-C:\Users\I041474\documents\visual studio 2015\Projects\Desi-Jokes\Desi-Jokes\AppPackages\Desi-Jokes_1.4.1.0\Desi-Jokes_1.4.1.0_x86_x64_arm.appxbundle
+C:\Users\I041474\documents\visual studio 2015\Projects\Desi-Jokes\Desi-Jokes\AppPackages\Desi-Jokes_1.5.2.0\Desi-Jokes_1.5.2.0_x86_x64_arm.appxbundle
