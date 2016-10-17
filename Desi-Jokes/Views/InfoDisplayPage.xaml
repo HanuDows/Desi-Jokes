@@ -50,7 +50,14 @@
         <controls:PageHeader x:Name="pageHeader" Frame="{x:Bind Frame}"
                              RelativePanel.AlignLeftWithPanel="True"
                              RelativePanel.AlignRightWithPanel="True"
-                             RelativePanel.AlignTopWithPanel="True" Text="Detail Page" />
+                             RelativePanel.AlignTopWithPanel="True" Text="Detail Page">
+
+            <!--  Primary commands  -->
+            <controls:PageHeader.PrimaryCommands>
+                <AppBarButton Icon="Home" Click="{x:Bind ViewModel.GotoHomePage}" Label="Home"/>
+            </controls:PageHeader.PrimaryCommands>
+
+        </controls:PageHeader>
 
         <!--  content  -->
         <ScrollViewer x:Name="Scroll_Viewer"
@@ -58,12 +65,22 @@
                       RelativePanel.AlignRightWithPanel="True"
                       RelativePanel.AlignBottomWithPanel="True"
                       RelativePanel.Below="pageHeader">
-            
-            <TextBlock x:Name="Info_Content"
+
+            <StackPanel>
+                <TextBlock x:Name="Info_Title"
+                   Text="{Binding InfoTitle}"
+                   FontSize="24"
+                   Margin="10,10,5,5"
+                   TextWrapping="WrapWholeWords" FontWeight="Bold">
+                </TextBlock>
+
+                <TextBlock x:Name="Info_Content"
                    Text="{Binding InfoContent}"
+                   FontSize="20"
                    Margin="10,10,5,5"
                    TextWrapping="WrapWholeWords">
-            </TextBlock>
+                </TextBlock>
+            </StackPanel>
             
         </ScrollViewer>
         

@@ -162,6 +162,44 @@
 
                 </RelativePanel>
             </PivotItem>
+
+            <PivotItem Header="Our Apps">
+                <RelativePanel DataContext="{Binding OurAppsPartViewModel}" 
+                               Tapped="{x:Bind ViewModel.HJDownload}"
+                               Margin="2,10,2,2">
+
+                    <Border x:Name="HJ_Logo" HorizontalAlignment="Right"
+                            VerticalAlignment="Top" BorderBrush="DimGray"
+                            BorderThickness="1" IsHitTestVisible="False"
+                            RelativePanel.AlignRightWithPanel="True"
+                            RelativePanel.AlignTopWithPanel="True">
+                        <Border.Background>
+                            <SolidColorBrush Color="{ThemeResource SystemAccentColor}" />
+                        </Border.Background>
+                        <Image Margin="1" Source="/Assets/HJLogo.png"
+                               Stretch="None" />
+                    </Border>
+
+                    <TextBlock x:Name="App_Name" Margin="0,0,0,12"
+                               FontSize="22" RelativePanel.AlignLeftWithPanel="True"
+                               RelativePanel.AlignRightWith="HJ_Logo"
+                               RelativePanel.AlignTopWithPanel="True"
+                               Text="Hindi Jokes" />
+
+                    <TextBlock x:Name="HJ_App_Text"
+                               Margin="0,0,5,0"
+                               RelativePanel.LeftOf="HJ_Logo"
+                               RelativePanel.AlignLeftWithPanel="True"
+                               TextWrapping="WrapWholeWords"
+                               RelativePanel.Below="App_Name">
+                        <Run>Best collection of Hindi Jokes</Run>
+                        <LineBreak/>
+                        <Run>Exclusively 'Veg Jokes' for family and friends</Run>
+                    </TextBlock>
+
+                </RelativePanel>
+            </PivotItem>
+            
         </Pivot>
 
     </RelativePanel>

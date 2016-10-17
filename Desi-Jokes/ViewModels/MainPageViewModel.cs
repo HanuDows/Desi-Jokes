@@ -35,7 +35,11 @@ namespace Desi_Jokes.ViewModels
                 //Value = suspensionState[nameof(Value)]?.ToString();
             }
 
+            // Read Posts from DB
+            HanuDowsApplication.getInstance().ReadPostsFromDB(false);
+
             ObservablePost op = ObservablePost.Instance();
+            op.Reset();
             PostTitle = op.PostTitle;
             PostMeta = op.PostMeta;
             PostContent = op.PostContent;
@@ -72,6 +76,9 @@ namespace Desi_Jokes.ViewModels
 
         public void GotoAbout() =>
             NavigationService.Navigate(typeof(Views.SettingsPage), 2);
+
+        public void GotoOurApps() =>
+            NavigationService.Navigate(typeof(Views.SettingsPage), 3);
 
         public void PreviousPost()
         {

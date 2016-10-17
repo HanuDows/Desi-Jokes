@@ -66,6 +66,7 @@
                 <AppBarButton Click="{x:Bind ViewModel.GotoSettings}" Label="Settings" />
                 <AppBarButton Click="{x:Bind ViewModel.GotoHelp}" Label="Help" />
                 <AppBarButton Click="{x:Bind ViewModel.GotoAbout}" Label="About" />
+                <AppBarButton Click="{x:Bind ViewModel.GotoOurApps}" Label="Our Apps" />
             </controls:PageHeader.SecondaryCommands>
 
         </controls:PageHeader>

@@ -54,10 +54,7 @@ namespace Desi_Jokes
 
             // Register backgroud task for Push Notifications
             await registerBackgroundTaskForPushNotification();
-
-            // Read Posts from DB
-            HanuDowsApplication.getInstance().ReadPostsFromDB(false);
-
+            
             var launchKind = DetermineStartCause(args);
             switch (launchKind)
             {

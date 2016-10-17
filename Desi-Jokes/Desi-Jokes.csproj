@@ -139,6 +139,7 @@
     <Content Include="Assets\BigLogo.scale-200.png" />
     <Content Include="Assets\BigLogo.scale-400.png" />
     <Content Include="Assets\DefaultData.xml" />
+    <Content Include="Assets\HJLogo.png" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\Logo.scale-200.png" />
     <Content Include="Assets\Logo.scale-400.png" />
@@ -221,6 +222,9 @@
   <ItemGroup>
     <Reference Include="HanuDowsFramework">
       <HintPath>..\..\HanuDows-Framework\HanuDowsFramework\bin\Release\HanuDowsFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\HanuDows-Framework\HanuDowsFramework\bin\Release\HtmlAgilityPack.dll</HintPath>
     </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

@@ -11,6 +11,15 @@ namespace Desi_Jokes.ViewModels
     {
         public SettingsPartViewModel SettingsPartViewModel { get; } = new SettingsPartViewModel();
         public AboutPartViewModel AboutPartViewModel { get; } = new AboutPartViewModel();
+        public OurAppsPartViewModel OurAppsPartViewModel { get; } = new OurAppsPartViewModel();
+
+        public async void HJDownload()
+        {
+            var uri = new Uri("ms-windows-store://pdp/?productid=9nblggh537gg");
+            //var uri = new Uri("https://www.microsoft.com/store/apps/9nblggh537gg");
+            //var uri = new Uri(string.Format("ms-windows-store:navigate?appid={0}", "9nblggh537gg"));
+            await Windows.System.Launcher.LaunchUriAsync(uri);
+        }
     }
 
     public class SettingsPartViewModel : ViewModelBase
@@ -61,5 +70,10 @@ namespace Desi_Jokes.ViewModels
         }
 
     }
-}
 
+    public class OurAppsPartViewModel : ViewModelBase
+    {
+        public Uri HJLogo => Windows.ApplicationModel.Package.Current.Logo;
+    }
+
+}

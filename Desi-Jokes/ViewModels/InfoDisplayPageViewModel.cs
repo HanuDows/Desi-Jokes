@@ -19,16 +19,17 @@ namespace Desi_Jokes.ViewModels
             }
         }
 
+        private string _infoTitle = "Initial Content";
+        public string InfoTitle { get { return _infoTitle; } set { Set(ref _infoTitle, value); } }
+
         private string _infoContent = "Initial Content";
         public string InfoContent { get { return _infoContent; } set { Set(ref _infoContent, value); } }
 
         public override async Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
         {
             var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
-            string title = localSettings.Values["ToastMessageTitle"].ToString();
-            string content = localSettings.Values["ToastMessageContent"].ToString();
-
-            InfoContent = title + "\n\r" + content;
+            InfoTitle = localSettings.Values["ToastMessageTitle"].ToString();
+            InfoContent = localSettings.Values["ToastMessageContent"].ToString();
 
             await Task.CompletedTask;
         }
@@ -45,6 +46,14 @@ namespace Desi_Jokes.ViewModels
         {
             args.Cancel = false;
             await Task.CompletedTask;
+        }
+
+        public void GotoHomePage()
+        {
+            NavigationService.Navigate(typeof(Views.MainPage));
+            NavigationService.ClearHistory();
+            NavigationService.ClearCache(true);
+
         }
     }
 }
