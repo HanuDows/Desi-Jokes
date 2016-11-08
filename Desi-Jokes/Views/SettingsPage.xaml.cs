@@ -18,6 +18,8 @@ namespace Desi_Jokes.Views
         {
             var index = int.Parse(_SerializationService.Deserialize(e.Parameter?.ToString()).ToString());
             MyPivot.SelectedIndex = index;
+
+            GoogleAnalytics.EasyTracker.GetTracker().SendView("SettingsPage");
         }
     }
 }
